@@ -6,7 +6,6 @@ module SubscriptionService
   module_function
 
   def activate(plan)
-    raise ArgumentError, 'PLAN_REQUIRED' if plan.nil? || plan.empty?
     raise ArgumentError, 'INVALID_PLAN' unless plan == 'pro'
 
     'ACTIVE'
